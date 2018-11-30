@@ -1,0 +1,41 @@
+{
+  "name": "new_restaurant",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node": "10.2.1",
+    "npm": "5.6.0"
+  },
+  "scripts": {
+    "test": "export NODE_ENV=test || SET \"NODE_ENV=test\" && mocha tests/*.test.js",
+    "test-watch": "nodemon --exec \"npm test -- --timeout=3000\"",
+    "start": "node index.js",
+    "server": "nodemon index.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "concurrently": "^4.1.0",
+    "cors": "^2.8.5",
+    "dompurify": "^1.0.8",
+    "express": "^4.16.4",
+    "http-proxy-middleware": "^0.19.1",
+    "lodash": "^4.17.11",
+    "mongodb": "^3.1.10",
+    "mongoose": "^5.3.14",
+    "stripe": "^6.17.0",
+    "validator": "^10.9.0"
+  },
+  "devDependencies": {
+    "expect": "^23.6.0",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.7",
+    "supertest": "^3.3.0"
+  }
+}
