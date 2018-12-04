@@ -7,7 +7,7 @@ const env = process.env.NODE_ENV || "development";
 // const keys = require("./dev");
 // console.log();
 // const keys = require('./dev');
-const { mongoURI, stripeSecretKey } = require("./dev");
+const { mongoURI, stripeSecretKey, sendGrid } = require("./dev");
 
 if (env === "production") {
   process.env.MONGODB_URI = require("./prod");
@@ -15,6 +15,7 @@ if (env === "production") {
   process.env.PORT = 9000;
   process.env.MONGODB_URI = mongoURI;
   process.env.STRIPE = stripeSecretKey;
+  process.env.SENDGRID = sendGrid;
 } else if (env === "test") {
   process.env.PORT = 9000;
   process.env.MONGODB_URI = "mongodb://localhost:27017/guestsTest";

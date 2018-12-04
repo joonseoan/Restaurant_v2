@@ -8,6 +8,7 @@ app.use(bodyParser.json());
 
 require("./routes/guestbookRoutes")(app);
 require("./routes/paymentRoutes")(app);
+require("./routes/emailRoutes")(app);
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
