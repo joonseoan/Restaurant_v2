@@ -4,8 +4,7 @@ const stripePublishableKey = "pk_test_Jg1vFTZIOBwQbxyPMQx4tJlu";
 const stripeSecretKey = "sk_test_veMH4jRWcZq5dMLg6Go3y5sh";
 const googleMapKey = "AIzaSyCAUYjKNzaHyn5wIdg0j_xOwKJ7SijYMWY";
 const openWeatherKey = "17eebd0e1cfaaab21d551ebfffd45148";
-const sendGrid =
-  "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";
+
 
 module.exports = {
   mongoURI,
@@ -16,4 +15,3 @@ module.exports = {
   sendGrid
 };
 
-// key id :  BngG3ZqLTHONhq3FXPCGJg
